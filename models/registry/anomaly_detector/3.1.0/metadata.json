@@ -1,0 +1,38 @@
+{
+  "name": "anomaly_detector",
+  "version": "3.1.0",
+  "created_utc": "2026-10-27T17:21:09+00:00",
+  "source_file": "models\\final_anomaly_ensemble_v3.joblib",
+  "sha256": "a1d6787969c3b562bd1c43b45f479f8b192b8750038c083eecd73e30d5f204d0",
+  "size_kb": 7507.8,
+  "python": "3.14.6",
+  "scikit_learn": "1.9.0",
+  "features": [
+    "log_amount",
+    "log_amount_ratio",
+    "tx_last_24h",
+    "spend_last_24h_log",
+    "is_new_merchant",
+    "hour",
+    "hour_deviation",
+    "is_night",
+    "log_amount_vs_user",
+    "days_since_merchant_tx",
+    "tx_last_3h",
+    "spend_last_3h_log",
+    "minutes_since_last_tx_log",
+    "tx_last_1h",
+    "tx_last_6h",
+    "same_merchant_last_3h",
+    "hour_rarity_user"
+  ],
+  "offline_test_metrics": {
+    "precision": 0.8214,
+    "recall": 0.5679,
+    "f1": 0.6715,
+    "roc_auc": 0.9009,
+    "avg_precision": 0.7259,
+    "false_alarm_rate": 0.0148
+  },
+  "notes": "Average of tuned isolation forest and one-class SVM score percentiles; alert threshold at the 99.5th training percentile."
+}
